@@ -1,0 +1,155 @@
+[
+  {
+    "event_time": "2019-02-13 11:30:00.000",
+    "type": "Service Stuck",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "All workers fine"
+  },
+  {
+    "event_time": "2019-02-13 17:30:00.000",
+    "type": "Service Stuck",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Stuck tasktypes : 125,143"
+  },
+  {
+    "event_time": "2019-02-13 13:13:54.799",
+    "type": "L1 Processing",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "LinkedIn - Arctic Wolf(2605) - Integration successful"
+  },
+  {
+    "event_time": "2019-02-13 02:35:44.702",
+    "type": "L1 Processing",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Twitter - KCB BANK(2604) - report download FAILURE!.,Execution of script FAILURE in iMacros App  ErrorMessage:RuntimeError: element BUTTON specified by TXT:Metrics:<SP>Summary was not found, line: 17 (-721) Error Code:-721"
+  },
+  {
+    "event_time": "2019-02-13 13:17:19.101",
+    "type": "L1 Processing ",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "LinkedIn - GEP(1726) - Integration successful"
+  },
+  {
+    "event_time": "2019-02-13 17:12:56.015",
+    "type": "Cost Mismatch",
+    "label1": "Data health",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "Mismatch accounts (0/696)"
+  },
+  {
+    "event_time": "2019-02-13 21:57:28.497",
+    "type": "Cost Mismatch",
+    "label1": "Data health",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "Mismatch accounts (0/696)"
+  },
+  {
+    "event_time": "2019-02-13 00:55:40.903",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "dxprod-hz-vm102 - Low disk space; Free space (5 GB); Used space (82%)"
+  },
+  {
+    "event_time": "2019-02-13 07:36:35.970",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm101 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-13 09:49:47.665",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "dxprod-hz-vm102 - Low disk space; Free space (5 GB); Used space (82%)"
+  },
+  {
+    "event_time": "2019-02-13 07:31:07.658",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm32 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-13 05:03:37.919",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm7 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-13 22:39:51.396",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Unprocessed S3 batches found - 2369(5); 2379(2)"
+  },
+  {
+    "event_time": "2019-02-13 01:34:24.660",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Unprocessed S3 batches found - 2403(10); 2601(34)"
+  },
+  {
+    "event_time": "2019-02-13 11:13:22.026",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "No unprocessed S3 batches found"
+  },
+  {
+    "event_time": "2019-02-13 08:59:05.883",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Unprocessed S3 batches found - 1631(1); 1662(2)"
+  },
+  {
+    "event_time": "2019-02-13 23:59:44.423",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "Unprocessed S3 batches found - 2369(10); 1662(34)"
+  }
+]

@@ -1,0 +1,155 @@
+  [
+  {
+    "event_time": "2019-02-17 11:30:00.000",
+    "type": "Service Stuck",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "All workers fine"
+  },
+  {
+    "event_time": "2019-02-17 17:30:00.000",
+    "type": "Service Stuck",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "TaskTypes: 125"
+  },
+  {
+    "event_time": "2019-02-17 05:42:13.607",
+    "type": "L1 Processing",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Hotstar - Smoke Test 44-update(2041) - Integration FAILURE!. The specified key does not exist."
+  },
+  {
+    "event_time": "2019-02-17 18:03:26.752",
+    "type": "L1 Processing",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "DoubleClick Bid Manager - ACKO(2559) - Integration FAILURE!. The errors were:Invalid column name 'Media Cost (Advertiser Currency)'. "
+  },
+  {
+    "event_time": "2019-02-17 10:40:58.240",
+    "type": "Cost Mismatch",
+    "label1": "Data health",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Mismatch accounts(Sephora) - 4/15; G(3),;B(0);F(1)"
+  },
+  {
+    "event_time": "2019-02-17 20:16:42.499",
+    "type": "Cost Mismatch",
+    "label1": "Data health",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Mismatch accounts - 14/596; G(3),;B(0);F(10)"
+  },
+  {
+    "event_time": "2019-02-17 22:54:42.507",
+    "type": "Cost Mismatch",
+    "label1": "Data health",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Mismatch accounts(Sephora) - 2/15; G(1),;B(0);F(1)"
+  },
+  {
+    "event_time": "2019-02-17 06:35:13.532",
+    "type": "Cost Mismatch",
+    "label1": "Data health",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "Mismatch accounts - 0/596; G(0),;B(0);F(0)"
+  },
+  {
+    "event_time": "2019-02-17 08:47:04.246",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm102 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-17 23:47:24.038",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm101 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-17 23:48:09.765",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm44 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-17 04:38:40.982",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm32 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-17 12:37:49.011",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm7 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-17 13:56:02.507",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Unprocessed S3 batches found - 2551(4); 2401(8)"
+  },
+  {
+    "event_time": "2019-02-17 10:46:30.794",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "No unprocessed S3 batches found"
+  },
+  {
+    "event_time": "2019-02-17 10:00:01.490",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "No unprocessed S3 batches found"
+  },
+  {
+    "event_time": "2019-02-17 04:59:52.977",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Unprocessed S3 batches found - 1969(10); 2601(15)"
+  }
+]

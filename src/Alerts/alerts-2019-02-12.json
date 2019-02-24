@@ -1,0 +1,137 @@
+[
+  {
+    "event_time": "2019-02-12 11:30:00.000",
+    "type": "Service Stuck",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Stuck tasktypes : 125,143"
+  },
+  {
+    "event_time": "2019-02-12 17:30:00.000",
+    "type": "Service Stuck",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Stuck tasktypes : 125,143"
+  },
+  {
+    "event_time": "2019-02-12 06:22:54.458",
+    "type": "L1 Processing",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "LinkedIn - Arctic Wolf(2605) - Integration successful"
+  },
+  {
+    "event_time": "2019-02-12 17:18:05.123",
+    "type": "L1 Processing",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "LinkedIn - Rising Stars(2327) - report download FAILURE!.,Execution of script FAILURE in iMacros App  ErrorMessage:RuntimeError: element SPAN specified by TXT:Time<SP>range* was not found, line: 16 (-721) Error Code:-721"
+  },
+  {
+    "event_time": "2019-02-12 00:04:08.646",
+    "type": "L1 Processing ",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "LinkedIn - GEP(1726) - Integration successful"
+  },
+  {
+    "event_time": "2019-02-12 13:41:39.572",
+    "type": "Cost Mismatch",
+    "label1": "Data health",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Mismatch accounts(Sephora) - 1/15; G(0),;B(0);F(1)"
+  },
+  {
+    "event_time": "2019-02-12 12:30:10.673",
+    "type": "Cost Mismatch",
+    "label1": "Data health",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Mismatch accounts - 5/596; G(0),;B(0);F(3)"
+  },
+  {
+    "event_time": "2019-02-12 02:00:29.653",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm102 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-12 02:31:02.293",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm101 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-12 05:51:26.802",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm44 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-12 08:39:19.067",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm32 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-12 18:26:10.367",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm7 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-13 11:30:00.000",
+    "type": "Service Stuck",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": ""
+  },
+  {
+    "event_time": "2019-02-12 02:59:56.381",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Unprocessed S3 batches found - 1281(10); 1727(5)"
+  },
+  {
+    "event_time": "2019-02-12 17:22:00.351",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Unprocessed S3 batches found - 1648(10); 1726(13)"
+  }
+]

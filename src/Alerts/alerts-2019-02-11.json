@@ -1,0 +1,137 @@
+[
+  {
+    "event_time": "2019-02-11 11:30:00.000",
+    "type": "Service Stuck",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Stuck tasktypes : 118,125,143"
+  },
+  {
+    "event_time": "2019-02-11 17:30:00.000",
+    "type": "Service Stuck",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "All workers fine"
+  },
+  {
+    "event_time": "2019-02-11 16:23:57.947",
+    "type": "L1 Processing",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Twitter - Sephora - Hongkong(1661) - report download FAILURE!Execution of script FAILURE in iMacros App  ErrorMessage:RuntimeError: element BUTTON specified by TXT:Metrics:<SP>Summary was not found, line: 17 (-721) Error Code:-721"
+  },
+  {
+    "event_time": "2019-02-11 02:51:52.706",
+    "type": "L1 Processing",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "LinkedIn - Rising Stars(2327) - report download FAILURE!.Execution of script FAILURE in iMacros App  ErrorMessage:RuntimeError: element SPAN specified by TXT:Time<SP>range* was not found, line: 16 (-721) Error Code:-721"
+  },
+  {
+    "event_time": "2019-02-11 01:16:14.761",
+    "type": "L1 Processing",
+    "label1": "Service up time",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "Quora - RichRelevance(2296) - Integration successful."
+  },
+  {
+    "event_time": "2019-02-11 05:26:30.001",
+    "type": "Cost Mismatch",
+    "label1": "Data health",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Mismatch accounts(Sephora) - 1/15; G(0),;B(0);F(1)"
+  },
+  {
+    "event_time": "2019-02-11 18:35:11.371",
+    "type": "Cost Mismatch",
+    "label1": "Data health",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Mismatch accounts - 5/596; G(0),;B(0);F(3)"
+  },
+  {
+    "event_time": "2019-02-11 16:21:08.289",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm102 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-11 07:56:50.359",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm101 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-11 09:59:31.402",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm44 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-11 08:08:20.427",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm32 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-11 21:07:40.372",
+    "type": "VM disk space",
+    "label1": "Infrastructure",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "dxprod-hz-vm7 - Disk space used is under 80%"
+  },
+  {
+    "event_time": "2019-02-11 13:02:50.774",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Unprocessed S3 batches found - 1631(5); 1662(2)"
+  },
+  {
+    "event_time": "2019-02-11 19:05:24.300",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "FAILURE",
+    "message": "Unprocessed S3 batches found - 1631(10); 1662(34)"
+  },
+  {
+    "event_time": "2019-02-11 03:11:39.886",
+    "type": "Unprocessed S3 batches",
+    "label1": "Tracking",
+    "label2": null,
+    "label3": null,
+    "status": "SUCCESS",
+    "message": "No unprocessed S3 batches found"
+  }
+]
