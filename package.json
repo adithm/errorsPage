@@ -4,14 +4,17 @@
   "version": "1.0.0",
   "author": "Aadith <chess.play1234@gmail.com>",
   "private": true,
+  "homepage": "https://adithm.github.com/errorsPage"
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "^1.2.0",
     "elasticsearch": "^15.4.1",
+    "gh-pages": "^2.0.1",
     "popper.js": "^1.12.9",
     "vue": "^2.5.3"
   },
