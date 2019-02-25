@@ -1,7 +1,8 @@
 <template>
     <div>
-    <b-dropdown class="dropdown" text="Alert Type">
-        <b-dropdown-item @click="updateAlertsToShow('All', '')"> All </b-dropdown-item> 
+    <b-dropdown class="dropdown" variant="success" :text="alertType">
+        <b-dropdown-item @click="updateAlertsToShow('All Alerts')"> All Alerts </b-dropdown-item> 
+        <b-dropdown-divider />
         <template v-for="(alerts, heading) in alertHeadings">
             <b-dropdown-item v-for="alert in alerts" 
                             :key="alert" 
@@ -25,7 +26,7 @@
         <tbody>
             <template v-for="(alerts, heading) in alertsToShow">
                 <tr :key="heading">
-                    <th class="label"> {{heading}} </th>
+                    <th> {{heading}} </th>
                 </tr>
                 <template v-for="alert in alerts">
                     <tr :key="alert">
@@ -37,7 +38,7 @@
                     <transition name="fade" :key="alert">
                     <tr v-if="showMessages[alert]['show']" style="background-color: #eee;">
                         <td colspan="8">
-                        <table class="table table-borderless" style="margin: 1rem auto;">
+                        <table class="table table-borderless" style="margin: 1rem auto; box-shadow: none;">
                             <thead>
                                 <th>Time</th>
                                 <th>Message</th>
@@ -74,6 +75,7 @@ export default {
         return {
             curDate: date.getDate(),
             curMonth: date.toString().split(" ")[1],
+            alertType: "All Alerts",
             alertHeadings: {},
             alerts: {},
             showMessages: {},
@@ -130,8 +132,9 @@ export default {
         
     },
     methods: {
-        updateAlertsToShow(alertType, heading) {
-            if (alertType === 'All')
+        updateAlertsToShow(alertType, heading = '') {
+            this.alertType = alertType
+            if (alertType === 'All Alerts')
                 this.alertsToShow = this.alertHeadings
             else {
                 console.log(alertType, heading)
@@ -231,13 +234,16 @@ export default {
 </script>
 
 <style scoped>
-    .card {
-        box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 10px;
+    .dropdown {
+        box-shadow: 0 2px 6px rgba(0,0,0,0.16), 0 2px 6px rgba(0,0,0,0.23); 
+        border-radius: 4px;
     }
     table {
         width: 80%;
         margin: 7rem auto;
         table-layout: fixed;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 10px;
+        border-radius: 5px;
     }
     th:first-child {
         width: 20rem;
@@ -249,9 +255,6 @@ export default {
         top: 4rem;
         left: 10%;
     }
-    .label {
-        /* border: none; */
-    }
     .pointer:hover {
         background:#eee;
         cursor:pointer;
@@ -262,9 +265,9 @@ export default {
         background:#eee;
     }
     .fade-enter-active, .fade-leave-active {
-        transition: opacity .5s;
+        transition: opacity .4s;
     }
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    .fade-enter, .fade-leave-to {
         opacity: 0;
     }
 </style>
