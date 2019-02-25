@@ -26,14 +26,16 @@
         <tbody>
             <template v-for="(alerts, heading) in alertsToShow">
                 <tr :key="heading">
-                    <th> {{heading}} </th>
+                    <th class="heading"> {{heading}} </th>
                 </tr>
                 <template v-for="alert in alerts">
                     <tr :key="alert">
                         <td> {{alert}} </td>
                         <td v-for="date in getDates()" :key="date" @click="getMessages($event, date, alert)" class="pointer">
-                            <i class="material-icons">{{getIcon(date, heading, alert)}}</i>
-                        </td>                        
+                            <template v-for="icon in [getIcon(date, heading, alert)]">
+                                <i :key="icon" class="material-icons" :style="getColor(icon)">{{icon}}</i>
+                            </template>
+                        </td>
                     </tr>
                     <transition name="fade" :key="alert">
                     <tr v-if="showMessages[alert]['show']" style="background-color: #eee;">
@@ -192,6 +194,23 @@ export default {
                 return "done_outline"
             }
         },
+        getColor(icon) {
+            let color = ''
+            let weight = 700
+            if (icon === 'done')
+                color = 'green'
+            else if (icon === 'error_outline') {
+                color = 'orange'
+                weight = 500
+            }
+            else
+                color = '#b00020'
+            return {
+                color: color,
+                // fontSize: '1.6rem',
+                fontWeight: weight
+            }
+        },
         getMessages(event, date, alert) {
             if (alert in this.showingMessage) {
                 this.showingMessage[alert].classList.remove("selected")
@@ -237,6 +256,8 @@ export default {
     .dropdown {
         box-shadow: 0 2px 6px rgba(0,0,0,0.16), 0 2px 6px rgba(0,0,0,0.23); 
         border-radius: 4px;
+        top: 4rem;
+        left: 10%;
     }
     table {
         width: 80%;
@@ -251,9 +272,13 @@ export default {
     th, td {
         text-align: center;
     }
-    .dropdown {
-        top: 4rem;
-        left: 10%;
+    .heading {
+        padding-top: 2.5rem;
+    }
+    i {
+        font-size: 1.6rem;
+        vertical-align: middle;
+        padding-bottom: 3px;
     }
     .pointer:hover {
         background:#eee;
