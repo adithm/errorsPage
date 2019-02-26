@@ -40,21 +40,24 @@
                     <transition name="fade" :key="alert">
                     <tr v-if="showMessages[alert]['show']" style="background-color: #eee;">
                         <td colspan="8">
-                        <table class="table table-borderless" style="margin: 1rem auto; box-shadow: none;">
+                        <table width="100%" class="table table-bordered innerTable">
+                            <col style="width:25%">
+                            <col style="width:60%">
+                            <col style="width:15%">
                             <thead>
                                 <th class="pointer" @click="sortBy('time', alert)">
                                     Time <i class="material-icons sortIcon">swap_vert</i>
                                 </th>
                                 <th>Message</th>
-                                <th class="pointer" @click="sortBy('status', alert)">
+                                <th class="pointer" @click="sortBy('status', alert)" >
                                     Status <i class="material-icons sortIcon">swap_vert</i>
                                 </th>
                             </thead>
                             <tbody>
                                 <tr v-for="message in showMessages[alert]['messages']" :key="message['time']">
-                                    <td>{{message['time']}}</td>
+                                    <td>{{ formatTime(message['time']) }}</td>
                                     <td>{{message['message']}}</td>
-                                    <td>{{message['status']}}</td>
+                                    <td >{{message['status']}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -221,7 +224,6 @@ export default {
                 color = '#b00020'
             return {
                 color: color,
-                // fontSize: '1.6rem',
                 fontWeight: weight
             }
         },
@@ -249,7 +251,6 @@ export default {
             }
             client.search({ index: index, body: body, type: 'alerts' })
             .then(result => {
-                this.loading = false
                 let messages = []
                 result.hits.hits.forEach(res => {
                     messages.push({
@@ -259,14 +260,26 @@ export default {
                     })
                 })
                 Vue.set(this.showMessages[alert], 'messages', messages)
+                this.sortBy('time', alert)
                 this.showMessages[alert]['show'] = true
+                this.loading = false
             })
             .catch(err=>{
                 console.log(err)
             });
         },
+        formatTime(time) {
+            time = time.split(' ')[1].split(':')
+            let meridiem = (time[0] < 12) ? ' AM' : ' PM'
+            time[0] = time[0] % 12 || 12
+            time[2] = time[2].split('.')[0]
+            return time.join(':') + meridiem
+        },
         sortBy(row, alert) {
-            this.showMessages[alert]['messages'] = _.sortBy(this.showMessages[alert]['messages'], row)
+            if (row === 'status')
+                this.showMessages[alert]['messages'] = _.orderBy(this.showMessages[alert]['messages'], [row, 'time'], ['desc', 'desc'])
+            else
+                this.showMessages[alert]['messages'] = _.orderBy(this.showMessages[alert]['messages'], row, 'desc')
         }
     }
 }
@@ -291,6 +304,13 @@ export default {
     }
     th, td {
         text-align: center;
+    }
+    .innerTable {
+        margin: 1rem auto;
+        box-shadow: none;
+    }
+    .innerTable th, .innerTable td {
+        text-align: left;
     }
     .heading {
         padding-top: 2.5rem;
