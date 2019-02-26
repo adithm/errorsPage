@@ -42,9 +42,13 @@
                         <td colspan="8">
                         <table class="table table-borderless" style="margin: 1rem auto; box-shadow: none;">
                             <thead>
-                                <th class="pointer" @click="sortBy('time', alert)">Time</th>
+                                <th class="pointer" @click="sortBy('time', alert)">
+                                    Time <i class="material-icons sortIcon">swap_vert</i>
+                                </th>
                                 <th>Message</th>
-                                <th class="pointer" @click="sortBy('status', alert)">Status</th>
+                                <th class="pointer" @click="sortBy('status', alert)">
+                                    Status <i class="material-icons sortIcon">swap_vert</i>
+                                </th>
                             </thead>
                             <tbody>
                                 <tr v-for="message in showMessages[alert]['messages']" :key="message['time']">
@@ -61,6 +65,7 @@
             </template>
         </tbody>
     </table>
+    <div v-if="loading" class="overlay"><div class="loader"></div></div>
     </div>
 </template>
 
@@ -84,10 +89,12 @@ export default {
             alerts: {},
             showMessages: {},
             showingMessage: {},
-            alertsToShow: {}
+            alertsToShow: {},
+            loading: false
         }
     },
-    created () {        
+    created () {  
+        this.loading = true      
         for (let i = 11; i < 18; i++) {
             const index="alerts-2019-02-" + i
             let body = {
@@ -127,6 +134,7 @@ export default {
                     this.alertsToShow = this.alertHeadings 
                     console.log("alertHeadings =", this.alertHeadings)
                     console.log("alerts =", this.alerts)
+                    this.loading = false
                 }
             })
             .catch(err=>{
@@ -227,6 +235,7 @@ export default {
                 }
                 delete this.showingMessage[alert]
             }
+            this.loading = true
             this.showingMessage[alert] = event.currentTarget
             event.currentTarget.classList.add("selected");
             console.log('getMessages', date, alert)           
@@ -240,6 +249,7 @@ export default {
             }
             client.search({ index: index, body: body, type: 'alerts' })
             .then(result => {
+                this.loading = false
                 let messages = []
                 result.hits.hits.forEach(res => {
                     messages.push({
@@ -290,6 +300,9 @@ export default {
         vertical-align: middle;
         padding-bottom: 3px;
     }
+    .sortIcon {
+        font-size: 1.4rem;
+    }
     .pointer:hover {
         background:#eee;
         cursor:pointer;
@@ -304,6 +317,32 @@ export default {
     }
     .fade-enter, .fade-leave-to {
         opacity: 0;
+    }
+    /* loader css */
+    .loader {
+        position: fixed;
+        border: 0.6rem solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 0.6rem solid black;
+        width: 4rem;
+        height: 4rem;
+        top: calc(50% - 2rem);
+        left: calc(50% - 2rem);
+        z-index: 2;
+        animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .overlay {
+        background: hsla(0, 0%, 0%, 0.2);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
     }
 </style>
 
