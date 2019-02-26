@@ -42,13 +42,15 @@
                         <td colspan="8">
                         <table class="table table-borderless" style="margin: 1rem auto; box-shadow: none;">
                             <thead>
-                                <th>Time</th>
+                                <th class="pointer" @click="sortBy('time', alert)">Time</th>
                                 <th>Message</th>
+                                <th class="pointer" @click="sortBy('status', alert)">Status</th>
                             </thead>
                             <tbody>
                                 <tr v-for="message in showMessages[alert]['messages']" :key="message['time']">
-                                    <td>{{showMessages[alert]['messages'][0]['time']}}</td>
+                                    <td>{{message['time']}}</td>
                                     <td>{{message['message']}}</td>
+                                    <td>{{message['status']}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -69,7 +71,7 @@ let date = new Date()
 const elasticsearch = require('elasticsearch');
 
 var client = new elasticsearch.Client({
-    hosts: ['http://127.0.0.1:9200']
+    hosts: ['https://bef7590d.ngrok.io']
 });
 
 export default {
@@ -142,6 +144,10 @@ export default {
                 console.log(alertType, heading)
                 this.alertsToShow = {
                     [heading] : [alertType]
+                }
+                for (let key in this.showMessages) {
+                    if (key !== alertType)
+                        this.showMessages[key]['show'] = false
                 }
                 console.log(this.alertsToShow)
             }
@@ -238,7 +244,8 @@ export default {
                 result.hits.hits.forEach(res => {
                     messages.push({
                         'time': res['_source']['event_time'],
-                        'message': res['_source']['message']
+                        'message': res['_source']['message'],
+                        'status': res['_source']['status']
                     })
                 })
                 Vue.set(this.showMessages[alert], 'messages', messages)
@@ -247,6 +254,9 @@ export default {
             .catch(err=>{
                 console.log(err)
             });
+        },
+        sortBy(row, alert) {
+            this.showMessages[alert]['messages'] = _.sortBy(this.showMessages[alert]['messages'], row)
         }
     }
 }

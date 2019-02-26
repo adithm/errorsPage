@@ -10,7 +10,7 @@ import errorTable from "./components/ErrorTable.vue";
 const elasticsearch = require("elasticsearch");
 
 var client = new elasticsearch.Client({
-  hosts: ["http://127.0.0.1:9200"]
+  hosts: ["https://bef7590d.ngrok.io"]
 });
 
 export default {
